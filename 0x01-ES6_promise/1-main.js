@@ -1,6 +1,7 @@
-import { error } from "console";
 import getFullResponseFromAPI from "./1-promise";
 
+// console.log(getFullResponseFromAPI(true));
+// console.log(getFullResponseFromAPI(false));
 
 getFullResponseFromAPI(false)
 .then((result) =>
@@ -11,5 +12,15 @@ getFullResponseFromAPI(false)
 {
     console.log(error);
 })
-// console.log(getFullResponseFromAPI(true));
-// console.log(getFullResponseFromAPI(false));
+
+/*async function handleAPI() {
+	try {
+		const res = await getFullResponseFromAPI(false);
+		console.log("success:", res);
+	}catch(err) {
+		console.error("error:", err);
+	}
+}
+handleAPI();
+*/
+
