@@ -4,14 +4,14 @@ import getFullResponseFromAPI from "./1-promise";
 // console.log(getFullResponseFromAPI(false));
 
 getFullResponseFromAPI(false)
-.then((result) =>
-{
-    console.log(result);
-})
-.catch((error) =>
-{
-    console.log(error);
-})
+	.then((result) =>
+	{
+		console.log(result);
+	})
+	.catch((error) =>
+	{
+		console.log(error.message);
+	})
 
 /*async function handleAPI() {
 	try {
