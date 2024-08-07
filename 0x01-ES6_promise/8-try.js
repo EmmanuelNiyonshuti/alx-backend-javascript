@@ -1,12 +1,12 @@
-/*
+/**
 *divideFunction - divides two numbers.
-*- numerator(Number)
-*- denominator(Number)
+* @param { Number } numerator
+* @param { Number } denominator
 *return: the numerator divided by the denominator.
 */
 export default function divideFunction(numerator, denominator) {
   if (denominator === 0) {
-    throw Error('can not divide by zero');
+    throw Error('cannot divide by 0');
   } else {
     return numerator / denominator;
   }
