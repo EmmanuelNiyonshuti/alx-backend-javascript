@@ -1,7 +1,7 @@
-/*
+/**
 *guardrail - create an array named queue.
-*mathFunction: function param.
-*return: return an array named queue.
+* @param { function } mathFunction.
+*@returns: an array.
 */
 export default function guardrail(mathFunction) {
   const queue = [];
