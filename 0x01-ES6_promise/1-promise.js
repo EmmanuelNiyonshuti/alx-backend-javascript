@@ -5,7 +5,15 @@ export default function getFullResponseFromAPI(success) {
     if (success) {
       resolve({ status: 200, body: 'success' });
     } else {
-      reject(new Error('The fake API is not working currently'));
+      reject('The fake API is not working currently');
     }
   });
 }
+
+getFullResponseFromAPI(false)
+.then((payload) => {
+  console.log(payload);
+})
+.catch((error) => {
+  console.error(error)
+})
