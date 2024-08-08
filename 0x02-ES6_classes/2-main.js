@@ -17,7 +17,7 @@ try
 {
     const c2 = new HolbertonCourse("ES6", 1, ["Bob", "Jane"])
     console.log(c2.students);
-    c2.students = 16;
+    c2.students = 18;
 }
 catch(err)
 {
