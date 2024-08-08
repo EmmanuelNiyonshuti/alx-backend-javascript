@@ -27,13 +27,13 @@ export default class Currency {
   }
 
   set name(newName) {
-    if (typeof (newName)) {
+    if (typeof (newName) !== 'string') {
       throw new TypeError('name must be a string');
     }
     this._name = newName;
   }
 
   displayFullCurrency() {
-    console.log(`${this._name} (${this._code})`);
+    return (`${this._name} (${this._code})`);
   }
 }
