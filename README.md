@@ -10,7 +10,7 @@ EmmanuelNiyonshuti
 * [(X)Twitter](https://x.com/NIYONSH77028058)
 
 ## Acknowledgements
-* ALX Software engineergin Program
+* ALX Software engineering Program
 * Holberton School
 
 ## License
