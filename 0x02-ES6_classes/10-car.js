@@ -6,7 +6,6 @@ export default class Car {
     this._motor = motor;
     this._color = color;
   }
-
   cloneCar() {
     // creates a new instance of the class of the object it's called on.
     const Obj = this.constructor;
