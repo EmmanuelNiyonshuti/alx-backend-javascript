@@ -11,21 +11,20 @@ export default function cleanSet(set, startString) {
   if (!startString) {
     return '';
   }
-  /*
-    let subString = ""
-    for(let val of set){
-        if (val.startsWith(startString)){
-            if (newString){
-                subString += '-'
-            }
-            subString += val.slice(startString.length)
-        }
+  let subString = '';
+  for (const val of set) {
+    if (val.startsWith(startString)) {
+      if (subString) {
+        subString += '-';
+      }
+      subString += val.slice(startString.length);
     }
-    return subString.join('-');
-    */
-  // using builtins
+  }
+  return subString;
+  /*
   return Array.from(set)
     .filter((str) => str.startsWith(startString))
     .map((substr) => substr.slice(startString.length))
     .join('-');
+    */
 }
