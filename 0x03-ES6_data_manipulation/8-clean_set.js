@@ -11,6 +11,9 @@ export default function cleanSet(set, startString) {
   if (!startString || !set) {
     return '';
   }
+  if (!(set instanceof Set)) {
+    return '';
+  }
   let subString = '';
   for (const val of set) {
     if (val.startsWith(startString)) {
