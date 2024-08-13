@@ -8,10 +8,15 @@
  */
 
 const cleanSet = (set, startString) => {
-  if (!startString || startString.length <= 0 || !set || set.size <= 0 || !(set instanceof Set) || typeof startString !== 'string') {
+  if (!startString || !set || set.size === 0 || !(set instanceof Set) || typeof startString !== 'string') {
     return '';
   }
-  let subString = '';
+  return Array.from(set)
+    .filter((str) => typeof str === 'string' && str.toLowerCase().startsWith(startString.toLowerCase()))
+    .map((str) => str.slice(startString.length))
+    .join('-');
+
+  /* let subString = '';
   for (const str of set) {
     if (str.startsWith(startString)) {
       if (subString) {
@@ -20,12 +25,6 @@ const cleanSet = (set, startString) => {
       subString += str.slice(startString.length);
     }
   }
-  return subString;
-  /*
-  return Array.from(set)
-    .filter((str) => str.startsWith(startString))
-    .map((substr) => substr.slice(startString.length))
-    .join('-');
-    */
+  return subString; */
 };
 export default cleanSet;
