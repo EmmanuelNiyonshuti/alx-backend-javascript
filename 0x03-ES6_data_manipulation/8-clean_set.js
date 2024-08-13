@@ -21,10 +21,4 @@ export default function cleanSet(set, startString) {
     }
   }
   return subString;
-  /*
-  return Array.from(set)
-    .filter((str) => str.startsWith(startString))
-    .map((substr) => substr.slice(startString.length))
-    .join('-');
-    */
 }
