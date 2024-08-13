@@ -17,6 +17,7 @@ export default function cleanSet(set, startString) {
       if (subString) {
         subString += '-';
       }
+      if (!startString.length) return '';
       subString += str.slice(startString.length);
     }
   }
