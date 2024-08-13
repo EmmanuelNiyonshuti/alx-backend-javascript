@@ -8,19 +8,16 @@
  */
 
 export default function cleanSet(set, startString) {
-  if (!startString || !set) {
-    return '';
-  }
-  if (!(set instanceof Set)) {
+  if (!startString || !set || !(set instanceof Set) || typeof startString !== 'string') {
     return '';
   }
   let subString = '';
-  for (const val of set) {
-    if (val.startsWith(startString)) {
+  for (const str of set) {
+    if (str.startsWith(startString)) {
       if (subString) {
         subString += '-';
       }
-      subString += val.slice(startString.length);
+      subString += str.slice(startString.length);
     }
   }
   return subString;
