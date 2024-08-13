@@ -7,8 +7,12 @@
  * @return: a string of all the set values that start with a specific string.
  */
 
-export default function cleanSet(set, startString) {
+const cleanSet = (set, startString)  => {
   if (!startString || !set || !(set instanceof Set) || typeof startString !== 'string') {
+    return '';
+  }
+  const subStrLen = startString.length;
+  if (subStrLen <= 0){
     return '';
   }
   let subString = '';
@@ -17,8 +21,7 @@ export default function cleanSet(set, startString) {
       if (subString) {
         subString += '-';
       }
-      if (!startString.length) return '';
-      subString += str.slice(startString.length);
+      subString += str.slice(subStrLen);
     }
   }
   return subString;
@@ -29,3 +32,4 @@ export default function cleanSet(set, startString) {
     .join('-');
     */
 }
+export default cleanSet;
