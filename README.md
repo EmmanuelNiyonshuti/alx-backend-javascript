@@ -1,6 +1,6 @@
 # alx-backend-javascript
 
-This repository comprises projects completed as part of the ALX Software Engineering program, specifically focusing on backend development using javaSCript. These projects are part of the specialization track that follows the completion of Software Engineering Foundations.
+This repository comprises projects completed as part of the ALX Software Engineering program, specifically focusing on backend development using javascript. These projects are part of the specialization track that follows the completion of Software Engineering Foundations.
 
 ## Author
 EmmanuelNiyonshuti

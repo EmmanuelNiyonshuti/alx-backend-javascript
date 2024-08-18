@@ -1,1 +1,2 @@
 # 0x03-ES6_data_manipulation
+This project focused on learning ES6 data manipulation techniques, with an emphasis on utilizing array higher-order methods. the tasks involve practical implementations of methods such as `forEach`, `map`, `filter`, `reduce`, `weakMap` and more.

@@ -1,1 +1,2 @@
 # 0x04-TypeScript
+This project is dedicated to mastering TypeScript through hands-on practice. The tasks cover essential TypeScript features, including the use of basic types, implementation of interfaces, classes, and functions. explores working with the DOM, utilizing generic types, applying namespaces, and merging declarations, among other advanced topics.
