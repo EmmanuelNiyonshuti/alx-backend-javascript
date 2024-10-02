@@ -7,7 +7,7 @@ process.stdin.setEncoding('utf-8');
 const isInteractive = process.stdin.isTTY;
 
 process.stdin.on('data', (input) => {
-  const name = input.trim();
+  const name = input.toString();
   console.log(`Your name is: ${name}`);
 
   if (!isInteractive) {
