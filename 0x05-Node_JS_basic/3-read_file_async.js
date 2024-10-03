@@ -1,5 +1,7 @@
 #!/usr/bin/node
 
+// reads file asynchronously
+
 const fs = require('fs');
 
 function countStudents(path) {
@@ -24,10 +26,12 @@ function countStudents(path) {
         }
         fields[field].push(firstName);
       });
+      let output = ""
       for (const [field, studentList] of Object.entries(fields)) {
         console.log(`Number of students in ${field}: ${studentList.length}. LIST: ${studentList.join(', ')}`);
+        output += `Number of students in ${field}: ${studentList.length}. LIST: ${studentList.join(', ')}`;
       }
-      resolve();
+      resolve(output);
     });
   });
 }
