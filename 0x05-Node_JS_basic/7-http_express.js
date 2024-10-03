@@ -3,14 +3,11 @@
 const express = require('express');
 
 const app = express();
+const fs = require('fs');
+
 const port = 1245;
 
-
 // reads file asynchronously
-
-const fs = require('fs');
-const { promises } = require('stream');
-
 function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf-8', (error, data) => {
