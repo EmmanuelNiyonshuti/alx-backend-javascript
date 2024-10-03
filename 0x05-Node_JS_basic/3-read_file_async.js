@@ -26,10 +26,10 @@ function countStudents(path) {
         }
         fields[field].push(firstName);
       });
-      let output = ""
+      let output = '';
       for (const [field, studentList] of Object.entries(fields)) {
-        console.log(`Number of students in ${field}: ${studentList.length}. LIST: ${studentList.join(', ')}`);
-        output += `Number of students in ${field}: ${studentList.length}. LIST: ${studentList.join(', ')}`;
+        output += `Number of students in ${field}: ${studentList.length}. LIST: ${studentList.join(', ')}\n`;
+        console.log(output);
       }
       resolve(output);
     });
