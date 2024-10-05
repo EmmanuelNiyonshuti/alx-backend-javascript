@@ -4,10 +4,12 @@
 
 import readDatabase from '../utils';
 
+const dbPath = process.argv[2];
+
 class StudentsController {
   static async getAllStudents(req, res) {
     try {
-      const students = await readDatabase('./database.csv');
+      const students = await readDatabase(dbPath);
       let resp = 'This is the list of our students\n';
       for (const [field, studentList] of Object.entries(students)) {
         resp += `Number of students in ${field}: ${studentList.length}. List: ${studentList.join(', ')}\n`;
@@ -24,7 +26,7 @@ class StudentsController {
       return res.status(500).send('Major parameter must be CS or SWE');
     }
     try {
-      const students = await readDatabase('./database.csv');
+      const students = await readDatabase(dbPath);
       const studentList = students[major];
       if (!studentList) {
         return res.status(200).send(`List: No students found for major ${major}`);
