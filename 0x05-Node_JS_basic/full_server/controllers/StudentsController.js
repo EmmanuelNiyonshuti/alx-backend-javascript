@@ -6,7 +6,7 @@ import readDatabase from '../utils';
 
 const dbPath = process.argv[2];
 
-class StudentsController {
+export default class StudentsController {
   static async getAllStudents(req, res) {
     try {
       const students = await readDatabase(dbPath);
@@ -37,5 +37,3 @@ class StudentsController {
     }
   }
 }
-
-export default StudentsController;
